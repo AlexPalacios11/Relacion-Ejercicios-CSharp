@@ -7,7 +7,7 @@
             //using System.Globalization; (esto es para que los decimales puedan ponerse con "," y con ".")
             //CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
 
-            Console.WriteLine("Escribe dos números reales: ");
+            Console.WriteLine("Escribe dos números reales, por favor: ");
             double number1 = Convert.ToDouble(Console.ReadLine());
             double number2 = Convert.ToDouble(Console.ReadLine());
             double result = number1 + number2;
