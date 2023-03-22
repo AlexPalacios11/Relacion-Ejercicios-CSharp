@@ -1,0 +1,11 @@
+● Indica el nodo raíz = 60
+● Indica una de sus hojas = 42
+● Traza un camino para llegar desde el 41 hasta el 42 = 41-53-46-42
+● Calcula el nivel del nodo 70 = 4
+● Calcula la altura del árbol = 4
+● Calcula la profundidad del nodo 25 = 3
+● Haz el recorrido en preorden, enorden y posorden =>
+
+PREORDEN = 60,41,16,25,53,46,42,55,74,65,63,62,64,70
+ENORDEN = 16,25,41,42,46,53,55,62,63,64,65,70,74
+POSORDEN = 25,16,42,46,55,53,41,62,64,63,70,65,74,60
