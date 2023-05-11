@@ -1,33 +1,34 @@
-﻿namespace Ejercicio16
+﻿int @base;
+bool isCorrect;
+
+do
 {
-    class Program
-    {
-        public static void Main()
-        {
-            Console.Write("Introduzca un número entero en base 10: ");
-            int number = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Introduce la base:");
+    @base = int.Parse(Console.ReadLine());
 
-            Console.WriteLine();
+    isCorrect = @base >= 2 && @base <= 9;
 
-            Console.Write("Ahora introduzca a la base a la que quiere pasar el número introduzido\n " +
-                           "anteriormente (solo se puede convertir a una base entre 2 y 9): ");
-            int baseuser = Convert.ToInt32(Console.ReadLine());
+    if (!isCorrect)
+        Console.WriteLine("La base no puede ser menor que 2 ni mayor que 9");
 
-            Console.WriteLine();
+} while (!isCorrect);
 
-            int rest;
-            string finalnumber = String.Empty;
+Console.WriteLine("Introduce el número:");
+int number = int.Parse(Console.ReadLine());
 
-            while (number > 0)
-            {
-                rest = number % baseuser;
-                number /= baseuser;
-                finalnumber += rest.ToString();
-            }
-            Console.WriteLine(finalnumber);
+int quotient = number, remainder;
+string result = "";
 
-            Console.WriteLine("\nPulsa enter para cerrar");
-            Console.ReadLine();
-        }
-    }
+while (quotient != 0)
+{
+    remainder = quotient % @base;
+    quotient = quotient / @base; // Es igual a quotient /= @base
+
+    result = result + remainder; // Es igual a result += remainder
 }
+
+for (int i = result.Length - 1; i >= 0; i--)
+{
+    Console.Write(result[i]);
+}
+
